@@ -1,13 +1,15 @@
 #!/usr/bin/python3
 """
 Module - 3-square
-Defines a class Square with a private instance attribute size and a public instance method area.
+Defines a class Square with a private instance attribute size
+and a public instance method area.
 """
 
 
 class Square:
     """
-    Square class with a private instance attribute size and a public instance method area.
+    Square class with a private instance attribute size
+    and a public instance method area.
     """
 
     def __init__(self, size=0):

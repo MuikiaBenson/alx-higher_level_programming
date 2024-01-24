@@ -8,7 +8,7 @@ properties, and public methods.
 
 class Square:
     """
-    Square class with private size, position, properties to retrieve 
+    Square class with private size, position, properties to retrieve
     and set size and position, and public methods area and my_print.
     """
     def __init__(self, size=0, position=(0, 0)):

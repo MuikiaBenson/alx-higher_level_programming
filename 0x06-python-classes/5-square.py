@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """
-Module - 5-square: Defines a Square class with private size, properties, and methods.
+Module - 5-square:
+Defines a Square class with private size, properties, and methods.
 """
 
 

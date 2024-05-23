@@ -2,7 +2,6 @@
 
 const request = require('request');
 const url = process.argv[2];
-const characterUrl = 'https://swapi-api.alx-tools.com/api/people/18/';
 
 request(url, function (err, response, body) {
   if (err) {
@@ -10,13 +9,16 @@ request(url, function (err, response, body) {
   } else if (response.statusCode === 200) {
     const films = JSON.parse(body).results;
     let count = 0;
-    for (const film of films) {
-      if (film.characters.includes(characterUrl)) {
-        count++;
+    for (const filmIndex in films) {
+      const filmChars = films[filmIndex].characters;
+      for (const charIndex in filmChars) {
+        if (filmChars[charIndex].includes('18')) {
+          count++;
+        }
       }
     }
     console.log(count);
   } else {
-    console.log('An error occurred. Status code: ' + response.statusCode);
+    console.log('An error occured. Status code: ' + response.statusCode);
   }
 });
